@@ -3,18 +3,23 @@
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 
-var numeroGiocatore = Math.floor(Math.random() * 7);
+var numeroGiocatore = Math.round(Math.random()*5)+1;
 console.log("il tuo numero è " + numeroGiocatore);
 
-var numeroPC = Math.floor(Math.random() * 7);
+var numeroPC = Math.round(Math.random()*5)+1;
 console.log("il tuo numero è " + numeroPC);
 
 var haiVinto = ("Complimenti! Hai battuto il computer.");
 var haiPerso = ("Mi dispiace, sei sfigato e hai perso.");
+var pareggio = ("Pareggio! Gioca ancora.")
 
 if (numeroGiocatore > numeroPC) {
   console.log(haiVinto);
   document.getElementById('titolo').innerHTML = "Complimenti! Hai battuto il computer.";
+}
+else if (numeroGiocatore == numeroPC) {
+  console.log(pareggio);
+  document.getElementById('titolo').innerHTML = "Pareggio! Gioca ancora.";
 }
 else {
   console.log(haiPerso);
