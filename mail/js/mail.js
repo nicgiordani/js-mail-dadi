@@ -3,18 +3,16 @@
 // stampa un messaggio appropriato sull’esito del controllo.
 
 
-var mailUtente = prompt("Inserisci la tua mail");
-console.log("La tua mail è" + mailUtente);
-document.getElementById('titolo').innerHTML = "La tua mail è " + mailUtente;
-
-var listaMail = ["ciao.1@ciao.com", "ciao.2@ciao.com", "ciao.3@ciao.com", "ciao.4@ciao.com", "ciao.5@ciao.com", "ciao.6@ciao.com", "ciao.7@ciao.com", "ciao.9@ciao.com", "ciao.9@ciao.com", "ciao.10@ciao.com",];
-
-var esitoPositivo = "Sei abilitato all'accesso";
-var esitoNegativo = "Iscriviti per eseguire l'accesso";
-
-if (mailUtente == listaMail) {
-  console.log(esitoPositivo);
+var mailingList = ["mail1@gmail.com", "mail2@gmail.com", "mail3@gmail.com"];
+var userMail = prompt("Inserisci email");
+var result = false;
+for (var i = 0; i < mailingList.length; i = i + 1) {
+  if (userMail == mailingList[i]) {
+    result = true;
+  }
 }
-else {
-  console.log(esitoNegativo);
+if (result == true) {
+  document.getElementById("access").innerHTML = "Accesso consentito";
+} else {
+  document.getElementById("access").innerHTML = "Accesso non consentito";
 }

@@ -7,7 +7,7 @@ var numeroGiocatore = Math.round(Math.random()*5)+1;
 console.log("il tuo numero è " + numeroGiocatore);
 
 var numeroPC = Math.round(Math.random()*5)+1;
-console.log("il tuo numero è " + numeroPC);
+console.log("il numero del computer è " + numeroPC);
 
 var haiVinto = ("Complimenti! Hai battuto il computer.");
 var haiPerso = ("Mi dispiace, sei sfigato e hai perso.");
